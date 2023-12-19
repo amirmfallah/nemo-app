@@ -36,7 +36,7 @@ export default function Root() {
       <div className="flex-1 max-h-full">
         <Outlet />
       </div>
-      <div className="fixed w-full bottom-navbar py-3 px-6">
+      <div className="fixed w-full bottom-navbar py-3 px-6 z-50">
         <div className="bg-white rounded-2xl flex flex-row justify-center p-1 drop-shadow-xl border">
           {navigation.map((item) => (
             <Link
