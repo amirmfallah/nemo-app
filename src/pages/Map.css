@@ -1,0 +1,14 @@
+.mapboxgl-ctrl {
+  display: none !important;
+}
+
+#center-marker {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  z-index: 99999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -100%);
+  cursor: pointer;
+}

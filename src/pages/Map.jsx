@@ -1,8 +1,9 @@
 import React from "react";
 import Mapir from "mapir-react-component";
 import "mapir-react-component/dist/index.css";
-
-const Map = Mapir.setToken({
+import { MapPinIcon } from "@heroicons/react/24/solid";
+import "./Map.css";
+const MapRef = Mapir.setToken({
   transformRequest: (url) => {
     return {
       url: url,
@@ -15,21 +16,24 @@ const Map = Mapir.setToken({
   },
 });
 
-const App = () => {
+const Map = () => {
   return (
     <div className="relative">
       <Mapir
-        style={"https://map.ir/vector/styles/main/mapir-style-dark.json"}
-        zoom={[5]}
+        style={"https://map.ir/vector/styles/main/mapir-Dove-style.json"}
+        zoom={[15]}
         onDrag={(e) => {
           console.log(e.getCenter());
         }}
         center={[51.42047, 35.729054]}
-        Map={Map}
+        Map={MapRef}
       ></Mapir>
-      <div id="center-marker"></div>
+      <MapPinIcon
+        id="center-marker"
+        className="text-orange-600 drop-shadow-lg"
+      />
     </div>
   );
 };
 
-export default App;
+export default Map;
