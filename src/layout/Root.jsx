@@ -32,9 +32,11 @@ export default function Root() {
   const matches = useMatches();
 
   return (
-    <div className="h-full w-full relative">
-      <Outlet />
-      <div className="fixed w-full bottom-0 py-3 px-6">
+    <div className="h-screen w-full relative flex flex-col overflow-scroll">
+      <div className="flex-1 max-h-full">
+        <Outlet />
+      </div>
+      <div className="fixed w-full bottom-navbar py-3 px-6">
         <div className="bg-white rounded-2xl flex flex-row justify-center p-1 drop-shadow-xl border">
           {navigation.map((item) => (
             <Link

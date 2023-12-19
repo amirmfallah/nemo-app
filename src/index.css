@@ -21,3 +21,7 @@ html {
 .no-select:focus {
   outline: none !important;
 }
+
+.bottom-navbar {
+  bottom: calc(env(safe-area-inset-bottom) + 1rem);
+}
