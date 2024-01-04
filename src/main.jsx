@@ -6,6 +6,10 @@ import Root from "./layout/Root.jsx";
 import Home from "./pages/Home.jsx";
 import Map from "./pages/Map.jsx";
 import Details from "./pages/Details.jsx";
+import Report from "./pages/Report.jsx";
+import Login from "./pages/Login.jsx";
+import Verify from "./pages/Verify.jsx";
+import Explore from "./layout/Explore.jsx";
 
 const router = createBrowserRouter([
   {
@@ -26,10 +30,22 @@ const router = createBrowserRouter([
         ],
       },
       {
+        path: "report",
+        element: <Report />,
+      },
+      {
         path: "map",
-        element: <Map />,
+        element: <Explore />,
       },
     ],
+  },
+  {
+    path: "auth/login",
+    element: <Login />,
+  },
+  {
+    path: "auth/verify",
+    element: <Verify />,
   },
 ]);
 

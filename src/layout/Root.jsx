@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, Outlet, useMatch, useMatches } from "react-router-dom";
 import {
+  GlobeAsiaAustraliaIcon,
   HomeIcon,
   MapIcon,
   NewspaperIcon,
@@ -14,13 +15,14 @@ const navigation = [
     key: "/home",
   },
   {
-    icon: () => <MapIcon className="h-6 w-6 " />,
-    label: "نقشه",
+    icon: () => <GlobeAsiaAustraliaIcon className="h-6 w-6 " />,
+    label: "گمشده",
     key: "/map",
   },
   {
     icon: () => <PlusCircleIcon className="h-6 w-6 " />,
     label: "گزارش جدید",
+    key: "/report",
   },
   {
     icon: () => <NewspaperIcon className="h-6 w-6 " />,

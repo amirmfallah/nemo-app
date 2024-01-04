@@ -9,8 +9,32 @@ import { Link } from "react-router-dom";
 
 export default function Details() {
   return (
-    <div className="flex flex-col h-full relative">
-      <img src="/assets/img.jpg" className="w-full" />
+    <div className="flex flex-col w-full relative">
+      <div className="carousel w-full">
+        <div id="slide1" className="carousel-item relative w-full">
+          <img src="/assets/img.jpg" className="w-full" />
+          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide4" className="btn btn-circle">
+              ❮
+            </a>
+            <a href="#slide2" className="btn btn-circle">
+              ❯
+            </a>
+          </div>
+        </div>
+        <div id="slide2" className="carousel-item relative w-full">
+          <img src="/assets/img.jpg" className="w-full" />
+          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide1" className="btn btn-circle">
+              ❮
+            </a>
+            <a href="#slide3" className="btn btn-circle">
+              ❯
+            </a>
+          </div>
+        </div>
+      </div>
+
       <Link to={"/home"} className="fixed left-0 top-0  ">
         <div className="p-2 bg-white rounded-full m-3">
           <ChevronLeftIcon className="h-5" />
@@ -22,19 +46,22 @@ export default function Details() {
         </div>
       </div>
       <div className="bg-slate-200 rounded-t-3xl p-6 -mt-6 flex-grow flex-1 z-10">
-        <p className="font-extrabold mt-2 text-2xl leading-10">رکس</p>
+        <div className="flex flex-row justify-between items-center">
+          <p className="font-extrabold mt-2 text-2xl leading-10">رکس</p>
+          <Link
+            to="/map"
+            className="p-2 bg-white rounded-full flex items-center gap-2 px-3 w-fit mt-3"
+          >
+            <span className="text-sm">نمایش روی نقشه</span>{" "}
+            <MapIcon className="h-5" />
+          </Link>
+        </div>
         <p className="font-base text-slate-500 leading-10">نر • ۲ ساله</p>
         <div className="flex gap-1 content-center text-slate-700">
           <MapPinIcon className="h-4 w-4" />
           <span className="text-xs">گلسار، خیابان ۱۲۲</span>
         </div>
-        <Link
-          to="/map"
-          className="p-2 bg-white rounded-full flex items-center gap-2 px-3 w-fit mt-3"
-        >
-          <span className="text-sm">نمایش روی نقشه</span>{" "}
-          <MapIcon className="h-5" />
-        </Link>
+
         <div className="grid grid-cols-3 gap-3 mt-3">
           <div className="bg-white rounded-md flex flex-col items-center justify-center p-2 gap-2">
             <p className="text-lg font-bold">گلدن</p>

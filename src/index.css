@@ -25,3 +25,19 @@ html {
 .bottom-navbar {
   bottom: calc(env(safe-area-inset-bottom) + 1rem);
 }
+
+.otp-input {
+  color: "black";
+  padding: "12px";
+  width: "3rem";
+  border: "none";
+  border-bottom: "1px solid";
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.tab-active {
+  color: white !important;
+}
