@@ -32,7 +32,7 @@ const navigation = [
   {
     icon: () => <UserIcon className="h-6 w-6 " />,
     label: "حساب من",
-    key: "/report",
+    key: "/profile",
   },
 ];
 

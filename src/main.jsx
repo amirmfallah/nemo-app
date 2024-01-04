@@ -9,6 +9,7 @@ import Login from "./pages/Login.jsx";
 import Verify from "./pages/Verify.jsx";
 import Explore from "./layout/Explore.jsx";
 import Home from "./pages/Home.jsx";
+import Profile from "./pages/Profile/index.jsx";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "map",
         element: <Explore />,
+      },
+      {
+        path: "profile",
+        element: <Profile />,
       },
     ],
   },

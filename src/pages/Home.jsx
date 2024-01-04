@@ -5,6 +5,7 @@ import {
 } from "@heroicons/react/24/outline";
 import React from "react";
 import ListItem from "../components/ListItem";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -36,9 +37,9 @@ export default function Home() {
           <p>برای تجربه بهتر، وارد شوید!</p>
         </div>
         <div className="flex-1 flex-grow-1"></div>
-        <button className="btn btn-square">
+        <Link to="/auth/login" className="btn btn-square">
           <ArrowLeftOnRectangleIcon className="w-6" />
-        </button>
+        </Link>
       </div>
 
       <div role="alert" className="alert alert-warning flex flex-role">
@@ -62,6 +63,14 @@ export default function Home() {
           </p>
         </div>
       </div>
+
+      <img
+        src="/images/nemo_ad.jpg"
+        alt=""
+        srcset=""
+        className="rounded-xl mt-4"
+      />
+
       <h1 className="font-bold pt-6">آخرین آگهی‌های گمشده</h1>
       <div className="flex max-w-full overflow-x-scroll no-scrollbar gap-3 pt-4">
         <div className="carousel-item w-1/3">
