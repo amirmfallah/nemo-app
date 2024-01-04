@@ -3,13 +3,12 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Root from "./layout/Root.jsx";
-import Home from "./pages/Home.jsx";
-import Map from "./pages/Map.jsx";
 import Details from "./pages/Details.jsx";
 import Report from "./pages/Report.jsx";
 import Login from "./pages/Login.jsx";
 import Verify from "./pages/Verify.jsx";
 import Explore from "./layout/Explore.jsx";
+import Home from "./pages/Home.jsx";
 
 const router = createBrowserRouter([
   {

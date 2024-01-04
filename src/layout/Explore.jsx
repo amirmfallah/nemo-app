@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Map from "../pages/Map";
-import Home from "../pages/Home";
 import {
   Bars3Icon,
   MapIcon,
   ListBulletIcon,
   MapPinIcon,
 } from "@heroicons/react/24/outline";
+import List from "../pages/List";
 
 export default function Explore() {
   const [toggleMap, setToggleMap] = useState(true);
@@ -31,7 +31,7 @@ export default function Explore() {
         )}
       </button>
       {!!toggleMap && <Map />}
-      {!toggleMap && <Home />}
+      {!toggleMap && <List />}
     </div>
   );
 }

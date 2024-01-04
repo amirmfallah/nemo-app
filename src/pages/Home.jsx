@@ -1,103 +1,86 @@
+import {
+  ArrowLeftOnRectangleIcon,
+  BellAlertIcon,
+  ChevronLeftIcon,
+} from "@heroicons/react/24/outline";
 import React from "react";
-import NemoIcon from "../../icon.svg";
-import { MagnifyingGlassIcon, MapPinIcon } from "@heroicons/react/24/solid";
-import { Link } from "react-router-dom";
-import { MagnifyingGlassCircleIcon } from "@heroicons/react/24/outline";
+import ListItem from "../components/ListItem";
 
 export default function Home() {
   return (
-    <div className="px-6 pb-6">
-      <div className="sticky top-0 bg-white py-6 border-b">
-        <div className="flex items-center gap-2 py-3">
-          <MagnifyingGlassIcon className="w-6 h-6" />
-          <p className="font-thin text-lg">جست‌و‌جوی حیوان گمشده</p>
+    <div className="p-6 flex flex-col">
+      {/* <div className="flex items-center gap-2 py-4">
+        <div className="avatar">
+          <div className="w-16 mask mask-squircle">
+            <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+          </div>
         </div>
+        <div>
+          <p className="text-gray-600 text-sm">خوش ‌آمدید</p>
+          <p>امیرمحمد فلاح</p>
+        </div>
+        <div className="flex-1 flex-grow-1"></div>
+        <button className="btn btn-square">
+          <BellAlertIcon className="w-6" />
+        </button>
+      </div> */}
 
-        <div role="tablist" className="tabs tabs-boxed mt-6 tabs-md">
-          <a role="tab" className="tab">
-            گمشده
-          </a>
-          <a role="tab" className="tab tab-active">
-            پیدا‌شده
-          </a>
+      <div className="flex items-center gap-2 py-4">
+        <div className="avatar">
+          <div className="w-16 mask mask-squircle">
+            <img src="https://source.boringavatars.com/beam/120/Stefan?colors=264653,f4a261,e76f51&square=true" />
+          </div>
         </div>
+        <div>
+          <p className="text-gray-600 text-sm">خوش ‌آمدید</p>
+          <p>برای تجربه بهتر، وارد شوید!</p>
+        </div>
+        <div className="flex-1 flex-grow-1"></div>
+        <button className="btn btn-square">
+          <ArrowLeftOnRectangleIcon className="w-6" />
+        </button>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 max-h-full overflow-hidden pb-24 mt-5">
-        <Link
-          className="flex flex-col p-3 bg-slate-100 rounded-md"
-          to={"/home/detail"}
+      <div role="alert" className="alert alert-warning flex flex-role">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="stroke-current shrink-0 h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
         >
-          <img src="/assets/img.jpg" alt="" className="rounded-md" />
-          <p className="font-extrabold mt-2">رکس</p>
-          <p className="font-base text-sm text-slate-500">نر • ۲ ساله</p>
-          <div className="flex gap-1 content-center text-slate-700 mt-3">
-            <MapPinIcon className="h-4 w-4" />
-            <span className="text-xs">گلسار، خیابان ۱۲۲</span>
-          </div>
-        </Link>
-        <div className="flex flex-col p-3 bg-slate-100 rounded-md">
-          <img src="/assets/img.jpg" alt="" className="rounded-md" />
-          <p className="font-extrabold mt-2">رکس</p>
-          <p className="font-base text-sm text-slate-500">نر • ۲ ساله</p>
-          <div className="flex gap-1 content-center text-slate-700 mt-3">
-            <MapPinIcon className="h-4 w-4" />
-            <span className="text-xs">گلسار، خیابان ۱۲۲</span>
-          </div>
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+          />
+        </svg>
+        <div className="text-right">
+          <p>حیوان خونگیتو به حسابت اضافه کن</p>
+          <p className="text-gray-600 flex items-center font-thin">
+            بیشتر بدانید <ChevronLeftIcon className="h-4" />
+          </p>
         </div>
-        <div className="flex flex-col p-3 bg-slate-100 rounded-md">
-          <img src="/assets/img.jpg" alt="" className="rounded-md" />
-          <p className="font-extrabold mt-2">رکس</p>
-          <p className="font-base text-sm text-slate-500">نر • ۲ ساله</p>
-          <div className="flex gap-1 content-center text-slate-700 mt-3">
-            <MapPinIcon className="h-4 w-4" />
-            <span className="text-xs">گلسار، خیابان ۱۲۲</span>
-          </div>
+      </div>
+      <h1 className="font-bold pt-6">آخرین آگهی‌های گمشده</h1>
+      <div className="flex max-w-full overflow-x-scroll no-scrollbar gap-3 pt-4">
+        <div className="carousel-item w-1/3">
+          <ListItem />
         </div>
-        <div className="flex flex-col p-3 bg-slate-100 rounded-md">
-          <img src="/assets/img.jpg" alt="" className="rounded-md" />
-          <p className="font-extrabold mt-2">رکس</p>
-          <p className="font-base text-sm text-slate-500">نر • ۲ ساله</p>
-          <div className="flex gap-1 content-center text-slate-700 mt-3">
-            <MapPinIcon className="h-4 w-4" />
-            <span className="text-xs">گلسار، خیابان ۱۲۲</span>
-          </div>
+        <div className="carousel-item w-1/3">
+          <ListItem />
         </div>
-        <div className="flex flex-col p-3 bg-slate-100 rounded-md">
-          <img src="/assets/img.jpg" alt="" className="rounded-md" />
-          <p className="font-extrabold mt-2">رکس</p>
-          <p className="font-base text-sm text-slate-500">نر • ۲ ساله</p>
-          <div className="flex gap-1 content-center text-slate-700 mt-3">
-            <MapPinIcon className="h-4 w-4" />
-            <span className="text-xs">گلسار، خیابان ۱۲۲</span>
-          </div>
+        <div className="carousel-item w-1/3">
+          <ListItem />
         </div>
-        <div className="flex flex-col p-3 bg-slate-100 rounded-md">
-          <img src="/assets/img.jpg" alt="" className="rounded-md" />
-          <p className="font-extrabold mt-2">رکس</p>
-          <p className="font-base text-sm text-slate-500">نر • ۲ ساله</p>
-          <div className="flex gap-1 content-center text-slate-700 mt-3">
-            <MapPinIcon className="h-4 w-4" />
-            <span className="text-xs">گلسار، خیابان ۱۲۲</span>
-          </div>
+        <div className="carousel-item w-1/3">
+          <ListItem />
         </div>
-        <div className="flex flex-col p-3 bg-slate-100 rounded-md">
-          <img src="/assets/img.jpg" alt="" className="rounded-md" />
-          <p className="font-extrabold mt-2">رکس</p>
-          <p className="font-base text-sm text-slate-500">نر • ۲ ساله</p>
-          <div className="flex gap-1 content-center text-slate-700 mt-3">
-            <MapPinIcon className="h-4 w-4" />
-            <span className="text-xs">گلسار، خیابان ۱۲۲</span>
-          </div>
+        <div className="carousel-item w-1/3">
+          <ListItem />
         </div>
-        <div className="flex flex-col p-3 bg-slate-100 rounded-md">
-          <img src="/assets/img.jpg" alt="" className="rounded-md" />
-          <p className="font-extrabold mt-2">رکس</p>
-          <p className="font-base text-sm text-slate-500">نر • ۲ ساله</p>
-          <div className="flex gap-1 content-center text-slate-700 mt-3">
-            <MapPinIcon className="h-4 w-4" />
-            <span className="text-xs">گلسار، خیابان ۱۲۲</span>
-          </div>
+        <div className="carousel-item w-1/3">
+          <ListItem />
         </div>
       </div>
     </div>
