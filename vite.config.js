@@ -39,7 +39,7 @@ export default defineConfig({
             purpose: "maskable",
           },
         ],
-        start_url: "/home",
+        start_url: "/",
         orientation: "portrait",
         display: "standalone",
         scope: "/",

@@ -3,7 +3,6 @@ import { Link, Outlet, useMatch, useMatches } from "react-router-dom";
 import {
   GlobeAsiaAustraliaIcon,
   HomeIcon,
-  MapIcon,
   NewspaperIcon,
   PlusCircleIcon,
   UserIcon,
@@ -13,21 +12,17 @@ const navigation = [
   {
     icon: () => <HomeIcon className="h-6 w-6 " />,
     label: "خونه",
-    key: "/home",
+    key: "/",
   },
   {
     icon: () => <GlobeAsiaAustraliaIcon className="h-6 w-6 " />,
     label: "گمشده",
-    key: "/map",
+    key: "/explore",
   },
   {
     icon: () => <PlusCircleIcon className="h-6 w-6 " />,
     label: "گزارش",
     key: "/report",
-  },
-  {
-    icon: () => <NewspaperIcon className="h-6 w-6 " />,
-    label: "آگهی‌ من",
   },
   {
     icon: () => <UserIcon className="h-6 w-6 " />,
@@ -41,10 +36,10 @@ export default function Root() {
 
   return (
     <div className="h-screen w-full relative flex flex-col overflow-scroll">
-      <div className="flex-1 max-h-full">
+      <div className="flex-1 max-h-full relative">
         <Outlet />
       </div>
-      <div className=" btm-nav px-6 btm-nav-lg pb-6 rounded-t-3xl bg-slate-100 ">
+      <div className="btm-nav px-6 btm-nav-lg rounded-t-3xl bg-gray-200 z-40">
         {navigation.map((item) => (
           <Link
             to={item.key}

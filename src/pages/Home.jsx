@@ -3,44 +3,49 @@ import {
   BellAlertIcon,
   ChevronLeftIcon,
 } from "@heroicons/react/24/outline";
-import React from "react";
+import React, { useState } from "react";
 import ListItem from "../components/ListItem";
 import { Link } from "react-router-dom";
 
 export default function Home() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <div className="p-6 flex flex-col">
-      {/* <div className="flex items-center gap-2 py-4">
-        <div className="avatar">
-          <div className="w-16 mask mask-squircle">
-            <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+      {!!isLoggedIn && (
+        <div className="flex items-center gap-2 py-4">
+          <div className="avatar">
+            <div className="w-16 mask mask-squircle">
+              <img src="https://source.boringavatars.com/beam/120/Stefan?colors=264653,f4a261,e76f51&square=true" />
+            </div>
           </div>
+          <div>
+            <p className="text-gray-600 text-sm">خوش ‌آمدید</p>
+            <p>امیرمحمد فلاح</p>
+          </div>
+          <div className="flex-1 flex-grow-1"></div>
+          <button className="btn btn-square">
+            <BellAlertIcon className="w-6" />
+          </button>
         </div>
-        <div>
-          <p className="text-gray-600 text-sm">خوش ‌آمدید</p>
-          <p>امیرمحمد فلاح</p>
-        </div>
-        <div className="flex-1 flex-grow-1"></div>
-        <button className="btn btn-square">
-          <BellAlertIcon className="w-6" />
-        </button>
-      </div> */}
+      )}
 
-      <div className="flex items-center gap-2 py-4">
-        <div className="avatar">
-          <div className="w-16 mask mask-squircle">
-            <img src="https://source.boringavatars.com/beam/120/Stefan?colors=264653,f4a261,e76f51&square=true" />
+      {!isLoggedIn && (
+        <div className="flex items-center gap-2 py-4">
+          <div className="avatar">
+            <div className="w-16 mask mask-squircle">
+              <img src="https://source.boringavatars.com/beam/120/Stefan?colors=264653,f4a261,e76f51&square=true" />
+            </div>
           </div>
+          <div>
+            <p className="text-gray-600 text-sm">خوش ‌آمدید</p>
+            <p>برای تجربه بهتر، وارد شوید!</p>
+          </div>
+          <div className="flex-1 flex-grow-1"></div>
+          <Link to="/auth/login" className="btn btn-square">
+            <ArrowLeftOnRectangleIcon className="w-6" />
+          </Link>
         </div>
-        <div>
-          <p className="text-gray-600 text-sm">خوش ‌آمدید</p>
-          <p>برای تجربه بهتر، وارد شوید!</p>
-        </div>
-        <div className="flex-1 flex-grow-1"></div>
-        <Link to="/auth/login" className="btn btn-square">
-          <ArrowLeftOnRectangleIcon className="w-6" />
-        </Link>
-      </div>
+      )}
 
       <div role="alert" className="alert alert-warning flex flex-role">
         <svg

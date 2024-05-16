@@ -10,6 +10,8 @@ import Verify from "./pages/Verify.jsx";
 import Explore from "./layout/Explore.jsx";
 import Home from "./pages/Home.jsx";
 import Profile from "./pages/Profile/index.jsx";
+import Splash from "./pages/Splash.jsx";
+import AddPet from "./pages/AddPet/AddPet.jsx";
 
 const router = createBrowserRouter([
   {
@@ -17,11 +19,15 @@ const router = createBrowserRouter([
     element: <Root />,
     children: [
       {
-        path: "home",
+        element: <Home />,
+        index: true,
+      },
+      {
+        path: "explore",
         children: [
           {
             path: "",
-            element: <Home />,
+            element: <Explore />,
           },
           {
             path: "detail",
@@ -34,12 +40,12 @@ const router = createBrowserRouter([
         element: <Report />,
       },
       {
-        path: "map",
-        element: <Explore />,
-      },
-      {
         path: "profile",
         element: <Profile />,
+      },
+      {
+        path: "boarding/:step?",
+        element: <AddPet />,
       },
     ],
   },
@@ -50,6 +56,10 @@ const router = createBrowserRouter([
   {
     path: "auth/verify",
     element: <Verify />,
+  },
+  {
+    path: "splash",
+    element: <Splash />,
   },
 ]);
 

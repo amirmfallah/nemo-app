@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function ListItem() {
   return (
-    <Link className="flex flex-col rounded-md" to={"/home/detail"}>
+    <Link className="flex flex-col rounded-md" to={"/explore/detail"}>
       <img src="/assets/img.jpg" alt="" className="rounded-md w-full" />
       <p className="font-extrabold mt-2">رکس</p>
       <p className="font-base text-sm text-slate-500">نر • ۲ ساله</p>
