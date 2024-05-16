@@ -13,6 +13,7 @@ import Profile from "./pages/Profile/index.jsx";
 import Splash from "./pages/Splash.jsx";
 import AddPet from "./pages/AddPet/AddPet.jsx";
 import Chat from "./pages/Chat.jsx";
+import Order from "./pages/Order.jsx";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "profile",
         element: <Profile />,
+      },
+      {
+        path: "profile/order",
+        element: <Order />,
       },
       {
         path: "boarding/:step?",

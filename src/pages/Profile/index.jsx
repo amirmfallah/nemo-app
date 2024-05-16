@@ -9,8 +9,11 @@ import {
 import { Cog6ToothIcon, PlusIcon } from "@heroicons/react/24/solid";
 import PetIcon from "../../assets/pet.svg";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Profile() {
+  const navigate = useNavigate();
+
   return (
     <div className="p-6 flex flex-col gap-6">
       <div className="flex items-center gap-2 pt-3">
@@ -45,7 +48,10 @@ export default function Profile() {
           </button>{" "}
         </div>
 
-        <div className="flex gap-4 items-center">
+        <div
+          className="flex gap-4 items-center"
+          onClick={() => navigate("/profile/order")}
+        >
           <div className="bg-orange-300 rounded-md p-2">
             <img src={PetIcon} className="w-6 h-6" />
           </div>
