@@ -15,7 +15,7 @@ export default function Profile() {
     <div className="p-6 flex flex-col gap-6">
       <div className="flex items-center gap-2 pt-3">
         <Cog6ToothIcon className="w-8 h-8" />
-        <p className="font-bold text-3xl">حساب من</p>
+        <p className="font-bold text-3xl">Profile</p>
       </div>
       <div className="flex items-center gap-4 py-4 bg-slate-200 p-4 rounded-xl">
         <div className="avatar">
@@ -24,8 +24,8 @@ export default function Profile() {
           </div>
         </div>
         <div className="h-full flex flex-col justify-between gap-2">
-          <p className="text-lg font-bold">امیرمحمد فلاح</p>
-          <p>۰۹۱۱۲۴۷۵۵۳۴</p>
+          <p className="text-lg font-bold">John Doe</p>
+          <p>john.doe@gmail.com</p>
         </div>
       </div>
 
@@ -35,7 +35,7 @@ export default function Profile() {
             src="/assets/img.jpg"
             className="w-10 h-10 rounded-md object-cover"
           />
-          <p>پپر</p>
+          <p>Rex</p>
           <div className="flex-1"></div>
           <button>
             <TrashIcon className="w-6" />
@@ -49,7 +49,7 @@ export default function Profile() {
           <div className="bg-orange-300 rounded-md p-2">
             <img src={PetIcon} className="w-6 h-6" />
           </div>
-          <p>اضافه کردن پت</p>
+          <p>Order new Nemo colar</p>
           <div className="flex-1"></div>
           <button>
             <PlusIcon className="w-6" />
@@ -62,7 +62,7 @@ export default function Profile() {
           <div className="bg-orange-300 rounded-md p-2">
             <UserIcon className="w-6 h-6" />
           </div>
-          <p>ویرایش اطلاعات کاربری</p>
+          <p>Edit profile information</p>
           <div className="flex-1"></div>
           <button>
             <ChevronLeftIcon className="w-6" />
@@ -72,7 +72,7 @@ export default function Profile() {
           <div className="bg-orange-300 rounded-md p-2">
             <UserIcon className="w-6 h-6" />
           </div>
-          <p>پشتیبانی</p>
+          <p>Support</p>
           <div className="flex-1"></div>
           <button>
             <ChevronLeftIcon className="w-6" />
@@ -85,7 +85,7 @@ export default function Profile() {
           <div className="bg-orange-300 rounded-md p-2">
             <ArrowRightOnRectangleIcon className="w-6 h-6" />
           </div>
-          <p>خروج</p>
+          <p>Logout</p>
           <div className="flex-1"></div>
           <button>
             <ChevronLeftIcon className="w-6" />

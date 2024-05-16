@@ -12,11 +12,13 @@
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "@tailwindcss/forms": "^0.5.7",
+    "@types/mapbox-gl": "^3.1.0",
     "localforage": "^1.10.0",
-    "mapir-react-component": "^2.0.7",
+    "mapbox-gl": "^3.3.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-map-gl": "^7.1.7",
     "react-otp-input": "^3.1.1",
     "react-router-dom": "^6.21.0",
     "sort-by": "^1.2.0"

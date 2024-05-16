@@ -2,13 +2,14 @@ import {
   ArrowLeftOnRectangleIcon,
   BellAlertIcon,
   ChevronLeftIcon,
+  ChevronRightIcon,
 } from "@heroicons/react/24/outline";
 import React, { useState } from "react";
 import ListItem from "../components/ListItem";
 import { Link } from "react-router-dom";
 
 export default function Home() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   return (
     <div className="p-6 flex flex-col">
       {!!isLoggedIn && (
@@ -19,8 +20,8 @@ export default function Home() {
             </div>
           </div>
           <div>
-            <p className="text-gray-600 text-sm">خوش ‌آمدید</p>
-            <p>امیرمحمد فلاح</p>
+            <p className="text-gray-600 text-sm">Welcome Back!</p>
+            <p>John Doe</p>
           </div>
           <div className="flex-1 flex-grow-1"></div>
           <button className="btn btn-square">
@@ -62,9 +63,9 @@ export default function Home() {
           />
         </svg>
         <div className="text-right">
-          <p>حیوان خونگیتو به حسابت اضافه کن</p>
+          <p>Add your pet to your profile now!</p>
           <p className="text-gray-600 flex items-center font-thin">
-            بیشتر بدانید <ChevronLeftIcon className="h-4" />
+            Learn More <ChevronRightIcon className="h-4" />
           </p>
         </div>
       </div>
@@ -76,7 +77,7 @@ export default function Home() {
         className="rounded-xl mt-4"
       />
 
-      <h1 className="font-bold pt-6">آخرین آگهی‌های گمشده</h1>
+      <h1 className="font-bold pt-6">Lost and Found</h1>
       <div className="flex max-w-full overflow-x-scroll no-scrollbar gap-3 pt-4">
         <div className="carousel-item w-1/3">
           <ListItem />

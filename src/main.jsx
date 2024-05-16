@@ -12,6 +12,7 @@ import Home from "./pages/Home.jsx";
 import Profile from "./pages/Profile/index.jsx";
 import Splash from "./pages/Splash.jsx";
 import AddPet from "./pages/AddPet/AddPet.jsx";
+import Chat from "./pages/Chat.jsx";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "report",
         element: <Report />,
+      },
+      {
+        path: "chat",
+        element: <Chat />,
       },
       {
         path: "profile",

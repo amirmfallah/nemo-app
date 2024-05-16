@@ -12,8 +12,8 @@ export default defineConfig({
         enabled: true,
       },
       manifest: {
-        name: "نمو",
-        short_name: "نمو",
+        name: "Nemo",
+        short_name: "Nemo",
         description: "Fluffless jasmine rice for those cold winter nights",
         icons: [
           {

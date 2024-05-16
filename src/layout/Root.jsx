@@ -11,22 +11,22 @@ import {
 const navigation = [
   {
     icon: () => <HomeIcon className="h-6 w-6 " />,
-    label: "خونه",
+    label: "Home",
     key: "/",
   },
   {
     icon: () => <GlobeAsiaAustraliaIcon className="h-6 w-6 " />,
-    label: "گمشده",
+    label: "Lost & Found",
     key: "/explore",
   },
   {
     icon: () => <PlusCircleIcon className="h-6 w-6 " />,
-    label: "گزارش",
+    label: "Report",
     key: "/report",
   },
   {
     icon: () => <UserIcon className="h-6 w-6 " />,
-    label: "حساب من",
+    label: "Profile",
     key: "/profile",
   },
 ];
@@ -52,7 +52,7 @@ export default function Root() {
             }
           >
             {item.icon()}
-            <span className="text-xs font-light">{item.label}</span>
+            <span className="text-xs">{item.label}</span>
           </Link>
         ))}
       </div>

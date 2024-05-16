@@ -1,39 +1,56 @@
-import React from "react";
-import Mapir from "mapir-react-component";
-import "mapir-react-component/dist/index.css";
-import { MapPinIcon } from "@heroicons/react/24/solid";
-import "./Map.css";
-const MapRef = Mapir.setToken({
-  transformRequest: (url) => {
-    return {
-      url: url,
-      headers: {
-        "x-api-key":
-          "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijk2ZWZmYTBlMTFkOGRjMWU0OTYxNTczNGJmOWE2OTg2OTNiMDk4MDYwNzYxYTcyZDlhODBiOTA0NTczZTcwODEzMTA5ZmUwZTk1NjM1MDNjIn0.eyJhdWQiOiIyNTMwNiIsImp0aSI6Ijk2ZWZmYTBlMTFkOGRjMWU0OTYxNTczNGJmOWE2OTg2OTNiMDk4MDYwNzYxYTcyZDlhODBiOTA0NTczZTcwODEzMTA5ZmUwZTk1NjM1MDNjIiwiaWF0IjoxNzAyMzA5MTczLCJuYmYiOjE3MDIzMDkxNzMsImV4cCI6MTcwNDgxNDc3Mywic3ViIjoiIiwic2NvcGVzIjpbImJhc2ljIl19.B7mcFbUsvKphIqvPzaPP2Mu7qwARmXL27H5cao_rsa4wjKQ5K_NzZ1wkB2LWJswMDQOd1q2pxxE4U6wvgT57-NT4Hw0PtC8zlPZt_PbYu4XrdCoXpi2jMCLZtRCSTbOUfT0R-wuMRoGW38AuH9bL99mHg9qoi_FUQA0A_NzvC9hd23PPjSuOf7RlPLLD1Q_ExQ808jgrGsLoIcu1c6d4f2cvH0xpUWkmaYDXCtidpaiqowHNWp2NJUe4I4562ZgrxRYxcP4baEy5e9Hh83P3hF4MjC0yoVK3rC9gnbkmZW_WdPArjKSGVL0VrnsCIvJGqKPWJvTx11UHMr8eS2dpqQ", //Mapir api key
-        "Mapir-SDK": "reactjs",
-      },
-    };
-  },
-});
+import React, { useEffect, useRef, useState } from "react";
+import Map, { Marker } from "react-map-gl";
 
-const Map = () => {
+import "mapbox-gl/dist/mapbox-gl.css";
+import { MapPinIcon } from "@heroicons/react/24/solid";
+import { useNavigate } from "react-router-dom";
+
+const MapP = () => {
+  const navigate = useNavigate();
   return (
-    <div className="relative">
-      <Mapir
-        style={"https://map.ir/vector/styles/main/mapir-Dove-style.json"}
-        zoom={[15]}
-        onDrag={(e) => {
-          console.log(e.getCenter());
+    <div className="relative h-full w-full">
+      <Map
+        mapboxAccessToken={import.meta.env.VITE_MAPBOX_TOKEN}
+        initialViewState={{
+          longitude: 145.119064,
+          latitude: -37.850128,
+          zoom: 14,
         }}
-        center={[51.42047, 35.729054]}
-        Map={MapRef}
-      ></Mapir>
-      <MapPinIcon
-        id="center-marker"
-        className="text-orange-600 drop-shadow-lg"
-      />
+        className="h-screen w-screen"
+        mapStyle="mapbox://styles/mapbox/streets-v9"
+      >
+        <Marker longitude={145.119064} latitude={-37.850128} anchor="bottom">
+          <div
+            className="text-red-500 drop-shadow-xl flex flex-col items-center justify-center gap-4"
+            onClick={() => navigate("/explore/detail")}
+          >
+            <MapPinIcon className="h-12 w-12" />
+            <div className="text-md px-2 py-1 rounded-md bg-white">Rex</div>
+          </div>
+        </Marker>
+
+        <Marker longitude={145.11} latitude={-37.850128} anchor="bottom">
+          <div
+            className="text-red-500 drop-shadow-xl flex flex-col items-center justify-center gap-4"
+            onClick={() => navigate("/explore/detail")}
+          >
+            <MapPinIcon className="h-12 w-12" />
+            <div className="text-md px-2 py-1 rounded-md bg-white">Lenny</div>
+          </div>
+        </Marker>
+
+        <Marker longitude={145.119064} latitude={-37.86} anchor="bottom">
+          <div
+            className="text-red-500 drop-shadow-xl flex flex-col items-center justify-center gap-4"
+            onClick={() => navigate("/explore/detail")}
+          >
+            <MapPinIcon className="h-12 w-12" />
+            <div className="text-md px-2 py-1 rounded-md bg-white">Pepper</div>
+          </div>
+        </Marker>
+      </Map>
     </div>
   );
 };
 
-export default Map;
+export default MapP;

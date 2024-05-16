@@ -11,15 +11,15 @@ export default function List() {
       <div className="sticky top-0 bg-white py-6 border-b">
         <div className="flex items-center gap-2 py-3">
           <MagnifyingGlassIcon className="w-6 h-6" />
-          <p className="font-thin text-lg">جست‌و‌جوی حیوان گمشده</p>
+          <p className="font-thin text-lg">Search</p>
         </div>
 
         <div role="tablist" className="tabs tabs-boxed mt-6 tabs-md">
           <a role="tab" className="tab">
-            گمشده
+            Found
           </a>
           <a role="tab" className="tab tab-active">
-            پیدا‌شده
+            Lost
           </a>
         </div>
       </div>

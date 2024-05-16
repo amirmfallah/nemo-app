@@ -14,19 +14,19 @@ export default function Explore() {
   return (
     <div className="h-full w-full relative">
       <button
-        className="btn btn-accent fixed left-6 top-6 z-50 text-white"
+        className="btn btn-accent fixed right-6 top-6 z-50 text-white"
         onClick={() => setToggleMap(!toggleMap)}
       >
         {!toggleMap && (
           <span className="flex flex-col items-center">
             <MapPinIcon className="h-5 w-5" />
-            <span className="font-thin text-xs">نقشه</span>
+            <span className="font-thin text-xs">Map View</span>
           </span>
         )}
         {!!toggleMap && (
           <span className="flex flex-col items-center">
             <ListBulletIcon className="h-6 w-6" />
-            <span className="font-thin text-xs">لیست</span>
+            <span className="font-thin text-xs">List View</span>
           </span>
         )}
       </button>
