@@ -29,5 +29,5 @@
   "start_url": "/auth/login",
   "orientation": "portrait",
   "display": "standalone",
-  "scope": "/"
+  "scope": "/auth/login"
 }
